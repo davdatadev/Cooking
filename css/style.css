@@ -158,7 +158,7 @@ body {
 /* === Footer === */
 
 footer {
-    background-color: var(--color-secundario);
+    background-color: var(--color-fondo);
     height: 60px;
     width: 100%;
     padding: 10px;
@@ -166,7 +166,7 @@ footer {
 
 footer p {
     text-align: center;
-    color: #fff;
+    color: var(--color-primario);
 }
 
 /* ============= Inicio page ============= */
@@ -176,6 +176,7 @@ footer p {
     font-weight: 700;
     color: var(--color-secundario);
     letter-spacing: 5px;
+    text-shadow: 1px 1px 2px var(--color-fondo);
 }
 
 .titulo p {
@@ -186,34 +187,13 @@ footer p {
     height: calc(100vh - var(--height--header));
     /* Cómo se puede meter opacidad a una variable? */
     background-image: linear-gradient(rgba(15, 109, 81, 0.4), var(--color-fondo)),
-    url('../img/main.png');
+    url('../img/main.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content:left;
     text-align: left;
-}
-
-
-
-.novedades h2 {
-    text-shadow: 1px 1px 2px var(--color-primario);
-    color: var(--color-fondo);
-    text-align: center;
-    align-content: center;
-    height: 60px;
-}
-
-
-/* ============= Productos ============= */
-
-/* === CARDS === */
-.productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, var(--card-width));
-    gap: 15px;
-    justify-content: center;
 }
 
 .card {
@@ -228,8 +208,35 @@ footer p {
     transition: background-color 0.5s, color 0.5s;
 }
 
-.card:hover,
-.card:focus{
+.novedades h2 {
+    text-shadow: 1px 1px 2px var(--color-primario);
+    color: var(--color-fondo);
+    text-align: center;
+    align-content: center;
+    height: 60px;
+}
+
+.cards-novedades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--card-width));
+    gap: 15px;
+    justify-content: center;
+}
+
+/* ============= Productos ============= */
+
+/* === CARDS === */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--card-width));
+    gap: 15px;
+    justify-content: center;
+}
+
+
+
+.producto:hover,
+.producto:focus{
     background-color: var(--color-fondo);
     /* border: unset; */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2) inset, -5px -5px 5px rgb(213, 246, 229, 0.5);
