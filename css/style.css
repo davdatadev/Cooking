@@ -1,0 +1,125 @@
+/* == Variables == */
+:root {
+    --color-primario: #0F6D51;
+    --color-secundario: #138862;
+    --color-fondo: #d5f6e5;
+
+    --color-primario2: #33616B;
+    --color-secundario2: #387782;
+    --color-fondo2: #BEE1E3;
+    --color-texto: #f9f9f9;
+    --fuente-principal: 'Montserrat', sans-serif;
+
+    --height--header: 50px;
+    --height--footer: 50px;
+    --card-width: 200px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* === Reset === */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--fuente-principal);
+}
+
+/* === General === */
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+header {
+    background-color: var(--color-secundario);
+    height: 50px;
+    width: 100%;
+} 
+
+.container{
+    width: 100%;
+    padding: 10px;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 700;
+    color: var(--color-primario);
+    padding-top: clamp(10px, 5vw, 20px); /* clamp(min, preferido, max) */
+}
+
+/* === Footer === */
+
+footer {
+    background-color: var(--color-secundario);
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+}
+
+/* ============= Main ============= */
+
+.titulo h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secundario);
+    letter-spacing: 5px;
+}
+
+.titulo p {
+    color: var(--color-texto);
+}
+
+.main {
+    height: calc(100vh - var(--height--header));
+    background-image: url('../img/main.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    text-align: left;
+}
+
+/* ============= Productos ============= */
+
+/* === CARDS === */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--card-width));
+    gap: 10px;
+}
+
+.card {
+    width: var(--card-width);
+    align-content: center;
+    font-size: 30px;
+    height: 300px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgb(213, 246, 229, 0.5);
+    border-radius: 12px;
+    text-align: center;
+    /* transition: all 0.5s; */
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.card:hover,
+.card:focus{
+    background-color: var(--color-fondo);
+    /* border: unset; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2) inset, -5px -5px 5px rgb(213, 246, 229, 0.5);
+}
+
+/* .card:hover::after{
+    background-color: var(--color-primario);
+} */
+
+
