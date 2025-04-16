@@ -76,8 +76,69 @@ body {
     color: var(--color-primario);
 }
 
+.hamburger-checkbox {
+    display: none;
+}
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-primario);
+    margin: 3px 0;
+}
+
+@media (max-width: 600px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-fondo);
+        position: absolute;
+        top: var(--height--header);
+        left: 0;
+        gap: 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    .nav-menu li a {
+        display: block;
+        border-radius: 20px;
+        padding: 0.5rem 0;
+        color: var(--color-primario);
+        letter-spacing: 2px;
+    }
+
+    .nav-menu li a:hover {
+        background-color: var(--color-primario);
+        color: var(--color-texto);
+    }
+
+    .hamburger {
+        display: flex;
+        background-color: var(--color-fondo);
+        border: solid 2px var(--color-fondo);
+        border-radius: 5px;
+        padding: 2px 5px;
+    }
+
+    .hamburger-checkbox:checked + .hamburger + .nav-menu {
+        display: flex;
+        color: var(--color-primario);
+    }
+}
 
 .container{
     width: 100%;
