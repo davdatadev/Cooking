@@ -2,7 +2,7 @@
 :root {
     --color-primario: #0f6d51;
     --color-secundario: #138862;
-    --color-fondo: rgb(213, 246, 229);
+    --color-fondo: #d5f6e5;
 
     --color-primario2: #33616B;
     --color-secundario2: #387782;
@@ -10,10 +10,10 @@
     --color-texto: #f9f9f9;
     --fuente-principal: 'Montserrat', sans-serif;
 
-    --height--header: 50px;
-    --height--footer: 50px;
+    --height-header: 60px;
     --card-width: 400px;
-    --card-width--novedad: 300px;
+    --card-width-novedad: 300px;
+
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -48,7 +48,7 @@ body {
     background-color: var(--color-secundario);
     height: 50px;
     width: 100%;
-} 
+}
 
 .logo {
     font-size: 1.5rem;
@@ -108,7 +108,7 @@ body {
         width: 100%;
         background-color: var(--color-fondo);
         position: absolute;
-        top: var(--height--header);
+        top: var(--height-header);
         left: 0;
         gap: 0;
     }
@@ -116,7 +116,7 @@ body {
     .nav-menu li {
         width: 100%;
         text-align: center;
-        
+
     }
 
     .nav-menu li a {
@@ -187,7 +187,7 @@ footer p {
 }
 
 .main {
-    height: calc(100vh - var(--height--header));
+    height: calc(100vh - var(--height-header));
     /* Cómo se puede meter opacidad a una variable? */
     background-image: linear-gradient(rgba(15, 109, 81, 0.4), var(--color-fondo)),
     url('../img/main.jpg');
@@ -216,7 +216,7 @@ footer p {
     align-content: center;
     padding: 20px 0;
     color: var(--color-fondo);
-    text-shadow: 1px 1px 2px var(--color-primario); 
+    text-shadow: 1px 1px 2px var(--color-primario);
 }
 
 .cards-novedades {
@@ -232,7 +232,7 @@ footer p {
     flex-direction: column;
     align-items: center;
     height: calc(100vh / 3);
-    width: var(--card-width--novedad);
+    width: var(--card-width-novedad);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 5px rgb(213, 246, 229, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
     border-radius: 20px;
@@ -244,7 +244,7 @@ footer p {
 .novedad:focus{
     background-color: rgba(213, 246, 229, 0.4);
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px rgb(213, 246, 229, 0.5);
-    background: 
+    background:
     linear-gradient(160deg, rgb(213, 246, 229,0.8), rgb(15, 109, 81,0.0)),
     linear-gradient(200deg, rgb(213, 246, 229,0.8), rgb(15, 109, 81,0.0));
     color: var(--color-primario);
@@ -269,7 +269,7 @@ footer p {
 /* === CARDS === */
 .productos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, var(--card-width));
+    grid-template-columns: repeat(auto-fill, var(--card-width));
     gap: 20px;
     justify-content: center;
     padding: 20px
@@ -292,8 +292,8 @@ footer p {
 .producto:focus{
     background-color: rgba(213, 246, 229, 0.4);
     /* border: unset; */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2) inset, -5px -5px 5px rgb(213, 246, 229, 0.5);
-    background: 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2) inset, -5px -5px 10px rgb(213, 246, 229, 0.5) inset;
+    background:
     linear-gradient(160deg, rgb(213, 246, 229,0.8), rgb(15, 109, 81,0.0)),
     linear-gradient(200deg, rgb(213, 246, 229,0.8), rgb(15, 109, 81,0.0));
     color: var(--color-primario)
@@ -322,4 +322,52 @@ footer p {
     font-size: 1rem;
     color: var(--color-texto);
     padding: 0 10px 20px 10px;
+}
+
+/* === Nosotros page === */
+
+.nosotros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--card-width));
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.equipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+    width: var(--card-width);
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 5px rgb(213, 246, 229, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 20px;
+    padding: 25px 40px;
+    overflow: hidden;
+}
+
+.equipo:hover,
+.equipo:focus{
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px rgb(213, 246, 229, 0.5);
+    color: var(--color-primario);
+    text-shadow: var(--color-fondo) 1px 1px 2px;
+    transform: scale(1.05);
+}
+
+.equipo img {
+    width: 100%;
+    height: 250px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.equipo h4 {
+    font-size: 1.5rem;
+    padding: 0 5px 20px 5px;
 }
