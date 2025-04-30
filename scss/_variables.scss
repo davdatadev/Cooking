@@ -1,0 +1,35 @@
+// Variables
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$color-primario: rgb(15, 109, 81);
+$color-secundario: rgb(19, 134, 98);
+$color-fondo: rgb(213, 246, 229);
+$color-texto: rgb(249, 249, 249);
+$fuente-principal: 'Poppins', sans-serif;
+
+$height-header: 60px;
+$card-width: 350px;
+$card-width-novedad: 300px;
+
+
+@mixin titulo-h1($color, $color-sombra) {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $color;
+    letter-spacing: 2px;
+    text-shadow: $color-sombra 1px 1px 2px;
+    padding: 0.5rem 0.5rem;
+}
+
+@mixin container-titulo ($color){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgba(213, 246, 229, 0.15);
+    border-radius: 0px 0px 16px 0px;
+    color: $color;
+}

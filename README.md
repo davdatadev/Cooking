@@ -9,5 +9,23 @@ Pagina web de practica para curso de HTML y CSS, el objetivo de este proyecto es
 
 ## Estructura del proyecto
 
-
-
+/css
+|  ├─ styles.css
+/scss
+|  ├─ _variables.scss
+|  ├─ _reset.scss
+|  ├─ _header.scss
+|  ├─ _home_page.scss
+|  ├─ _nosotros_page.scss
+|  ├─ _productos_page.scss
+|  └─ main.scss
+/img
+|  ├─ /productos
+|  ├─ main.jpg
+|  └─ flaticon.png
+/pages
+|  ├─ nosotros.html
+|  ├─ productos.html
+|  └─ contacto.html
+├─ index.html
+└─ README.md
