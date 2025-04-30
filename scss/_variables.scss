@@ -7,10 +7,29 @@ $color-primario: rgb(15, 109, 81);
 $color-secundario: rgb(19, 134, 98);
 $color-fondo: rgb(213, 246, 229);
 $color-texto: rgb(249, 249, 249);
-$fonts-primary: 'Poppins', sans-serif;
+$fuente-principal: 'Poppins', sans-serif;
 
 $height-header: 60px;
 $card-width: 350px;
 $card-width-novedad: 300px;
 
 
+@mixin titulo-h1($color, $color-sombra) {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $color;
+    letter-spacing: 2px;
+    text-shadow: $color-sombra 1px 1px 2px;
+    padding: 0.5rem 0.5rem;
+}
+
+@mixin container-titulo ($color){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgba(213, 246, 229, 0.15);
+    border-radius: 0px 0px 16px 0px;
+    color: $color;
+}

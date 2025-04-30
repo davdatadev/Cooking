@@ -1,4 +1,13 @@
 // Nosotros page
+@use "variables" as *;
+
+.titulo {
+    @include container-titulo($color-secundario);
+}
+
+.titulo h1 {
+    @include titulo-h1($color-secundario, $color-fondo);
+}
 
 .nosotros {
     display: grid;
@@ -21,14 +30,14 @@
     border-radius: 20px;
     padding: 25px 40px;
     overflow: hidden;
-}
 
-.equipo:hover,
-.equipo:focus{
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px rgb(213, 246, 229, 0.5);
-    color: $color-primario;
-    text-shadow: $color-fondo 1px 1px 2px;
-    transform: scale(1.05);
+    &:hover,
+    &:focus{
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px rgb(213, 246, 229, 0.5);
+        color: $color-primario;
+        text-shadow: $color-fondo 1px 1px 2px;
+        transform: scale(1.05);
+    }
 }
 
 .equipo img {
