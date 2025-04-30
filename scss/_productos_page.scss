@@ -1,0 +1,59 @@
+// Productos Page 
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, $card-width);
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 450px;
+    width: $card-width;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 5px rgb(213, 246, 229, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 20px;
+    padding: 25px 40px;
+    overflow: hidden;
+}
+
+.producto:hover,
+.producto:focus{
+    background-color: rgba(213, 246, 229, 0.4);
+    /* border: unset; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2) inset, -5px -5px 10px rgb(213, 246, 229, 0.5) inset;
+    background:
+    linear-gradient(160deg, rgb(213, 246, 229,0.8), rgb(15, 109, 81,0.0)),
+    linear-gradient(200deg, rgb(213, 246, 229,0.8), rgb(15, 109, 81,0.0));
+    color: $color-primario;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.producto img:hover {
+    transform: scale(1.05);
+}
+
+.producto h4 {
+    font-size: 1.5rem;
+    color: $color-texto;
+}
+
+.producto p {
+    font-size: 1rem;
+    color: $color-texto;
+    padding: 0 10px 20px 10px;
+}
