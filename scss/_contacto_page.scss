@@ -1,0 +1,71 @@
+// Contacto page
+@use "variables" as *;
+
+.titulo {
+    @include container-titulo($color-secundario);
+}
+
+.titulo h1 {
+    @include titulo-h1($color-secundario, $color-fondo);
+}
+
+.contacto {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.formulario-contacto,
+.info-contacto {
+    flex: 1; /* Permite que ambos elementos ocupen el mismo espacio */
+    padding: 20px;
+    min-width: 300px; 
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+.info-contacto h2 {
+    font-size: 2rem;
+    color: $color-texto;
+}
+
+@media (max-width: 600px) {
+    .contacto {
+        flex-direction: column;
+    }
+
+    .formulario-contacto,
+    .info-contacto {
+        flex: none;
+        width: 100%;
+    }
+}
