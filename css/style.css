@@ -249,7 +249,7 @@ img {
 }
 
 .novedad h4 {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   color: rgb(249, 249, 249);
   padding: 0 5px 20px 5px;
 }
@@ -282,7 +282,7 @@ img {
   padding: 5px;
 }
 
-@media (width <= 750px) {
+@media (width <= 800px) {
   .home {
     display: flex;
     flex-direction: column;
@@ -414,15 +414,92 @@ img {
   height: 300px;
   max-height: 300px;
   object-fit: cover;
-  border: solid 1px #333;
   border-radius: 20px;
-  padding-bottom: 10px;
   transition: transform 0.3s;
 }
 
 .equipo h4 {
   font-size: 1.5rem;
   padding: 10px 5px 20px 5px;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: rgba(213, 246, 229, 0.15);
+  border-radius: 0px 0px 16px 0px;
+  color: rgb(19, 134, 98);
+}
+
+.titulo h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(19, 134, 98);
+  letter-spacing: 2px;
+  text-shadow: rgb(213, 246, 229) 1px 1px 2px;
+  padding: 0.5rem 0.5rem;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: wrap;
+  justify-content: space-between;
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.formulario-contacto,
+.info-contacto {
+  flex: 1; /* Permite que ambos elementos ocupen el mismo espacio */
+  padding: 20px;
+  min-width: 300px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.info-contacto h2 {
+  font-size: 2rem;
+  color: rgb(249, 249, 249);
+}
+
+@media (max-width: 600px) {
+  .contacto {
+    flex-direction: column;
+  }
+  .formulario-contacto,
+  .info-contacto {
+    flex: none;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
