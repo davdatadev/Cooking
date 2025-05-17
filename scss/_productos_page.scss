@@ -1,7 +1,13 @@
 // Productos Page 
 @use "variables" as *;
 
+.titulo {
+    @include container-titulo($color-primario2, $color-texto);
+}
 
+.titulo h1 {
+    @include titulo-h1($color-primario, $color-texto);
+}
 
 .productos {
     display: grid;
