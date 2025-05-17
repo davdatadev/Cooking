@@ -1,55 +1,104 @@
 // Nosotros page
 @use "variables" as *;
 
-.titulo {
-    @include container-titulo($color-secundario);
-}
-
-.titulo h1 {
-    @include titulo-h1($color-secundario, $color-fondo);
-}
-
 .nosotros {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, $card-width);
-    gap: 20px;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.equipo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 450px;
-    width: $card-width;
-    background-color: $color-fondo;
-    color: $color-primario;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 5px rgb(213, 246, 229, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 20px;
-    padding: 25px 40px;
-    overflow: hidden;
-
-    &:hover,
-    &:focus{
-        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px rgb(213, 246, 229, 0.5);
-        color: $color-primario;
-        text-shadow: $color-fondo 1px 1px 2px;
-        transform: scale(1.05);
-    }
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
 }
 
-.equipo img {
+.card-equipo {
     width: 100%;
-    height: 300px;
-    max-height: 300px;
-    object-fit: cover;
+    max-width: $card-width-equipo;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    border: 1px solid $color-primario2;
+    gap: 20px;
     border-radius: 20px;
-    transition: transform 0.3s;
+    padding: 25px 25px;
+    overflow: hidden;
 }
 
-.equipo h4 {
+.personal-image {
+    width: 200px;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.personal-1 {
+    background-image: url('../img/equipo/Miembro_mujer.jpg');
+}
+
+.personal-2 {
+    background-image: url('../img/equipo/Miembro_hombre.jpg');
+}
+
+.personal-description {
+    width: 438px;
+    padding: 10px;
+}
+
+.personal-description h4 {
     font-size: 1.5rem;
-    padding: 10px 5px 20px 5px;
+    padding: 10px 5px 5px 5px;
+}
+
+.personal-description h5 {
+    padding: 5px;
+    color: $color-primario2;
+}
+
+.personal-description p {
+    padding: 5px;
+}
+
+@media (max-width: 750px) {
+    .nosotros {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax($card-width, 1fr));
+        gap: 20px;
+        justify-content: space-around;
+        padding: clamp(0px, 10vw, 20px) clamp(0px, 10vw, 50px);
+    }
+
+    .card-equipo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        max-width: 100%; //Para asegurar que no se desborde
+    }
+
+    .personal-1, 
+    .personal-2 {
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        transition: transform 0.3s;
+    }
+
+    .personal-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .personal-description h4,
+    .personal-description h5,
+    .personal-description p {
+        text-align: center;
+        padding: 5px;
+        width: 100%;
+        max-width: 300px;
+    }
+    .personal-description p {
+        text-align: left;
+    } 
 }

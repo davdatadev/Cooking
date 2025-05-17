@@ -5,7 +5,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    background-color: $color-secundario;
+    // background-color: $color-primario2;
+    // mask-image: linear-gradient(to bottom, black , transparent);
     height: $height-header;
     width: 100%;
 }
@@ -13,7 +14,7 @@
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: $color-texto;
+    color: $color-texto2;
 }
 
 .navbar {
@@ -29,7 +30,7 @@
 
 .nav-menu a {
     text-decoration: none;
-    color: $color-texto;
+    color: $color-texto2;
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -37,8 +38,8 @@
 }
 
 .nav-menu a:hover, a:focus {
-    background-color: $color-fondo;
-    color: $color-primario;
+    background-color: $color-primario2;
+    color: $color-texto;
 }
 
 /* === Menu tipo hamburguesa === */

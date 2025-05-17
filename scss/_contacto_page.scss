@@ -1,14 +1,6 @@
 // Contacto page
 @use "variables" as *;
 
-.titulo {
-    @include container-titulo($color-secundario);
-}
-
-.titulo h1 {
-    @include titulo-h1($color-secundario, $color-fondo);
-}
-
 .contacto {
     display: flex;
     flex-direction: wrap;
