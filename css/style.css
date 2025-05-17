@@ -273,10 +273,40 @@ img {
   align-items: center;
   border-radius: 18px;
   border: #373737 1px solid;
-  background-color: rgba(213, 246, 229, 0.15);
+  background-color: #ffb963;
   mask-image: blur(5px);
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
+@property --deg {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+.redes::before,
+.redes::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: conic-gradient(from var(--deg) at center, #c3fcf1, #007561, #2a8374, #c3fcf1);
+  border-radius: inherit;
+  padding: 2px;
+  z-index: -1;
+  animation: autoRotate 2s linear infinite;
+}
+
+.redes::after {
+  filter: blur(10px);
+}
+
+@keyframes autoRotate {
+  to {
+    --deg: 360deg;
+  }
+}
 .redes a {
   font-size: 3rem;
   color: #373737;
@@ -299,7 +329,6 @@ img {
   .redes {
     flex-direction: row;
     justify-content: center;
-    border-radius: 0px 0px 0px 0px;
   }
   .redes a {
     font-size: 40px;
